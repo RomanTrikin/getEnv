@@ -1,6 +1,6 @@
 {
     "name": "valean/myenv",
-    "description": "Пакет для работы работы с .env файлами.",
+    "description": "Пакет для работы с .env файлами.",
     "authors": [
         {
             "name": "roman",
@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "vlucas/phpdotenv": "dev-master"
+        "vlucas/phpdotenv": "^4.1"
     },
     
     "autoload": {
