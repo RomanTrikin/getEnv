@@ -1,6 +1,6 @@
 {
     "name": "valean/myenv",
-    "description": "Description of project PhpProject2.",
+    "description": "Пакет для работы работы с .env файлами.",
     "authors": [
         {
             "name": "roman",
