@@ -15,25 +15,21 @@ require 'vendor/autoload.php';
  */
 class myEnv {
     
-    private $filelist;
-    
-    private $ENV;
-    
-    private $path;
     
     public function __construct()
     {
-        $this->filelist = glob("*.env");
-        $this-> path = $_SERVER['DOCUMENT_ROOT'];
-        foreach ($this->filelist as $value) {
-            $dotenv = Dotenv::createImmutable($this-> path, $value);
-            $dotenv->load();
-        }
-        $this->ENV = $_ENV;
+
     }
 
-    public function get($env_name)
+    public static function get($env_name)
     {
-        return $this->ENV[$env_name];
+        $filelist = glob("{,.}*env", GLOB_BRACE);
+        $path = $_SERVER['DOCUMENT_ROOT'];
+        foreach ($filelist as $value) {
+            echo $value; echo "\n";
+            $dotenv = Dotenv::createImmutable($path, $value);
+            $dotenv->load();
+        }
+        return $_ENV[$env_name];
     }
 }
