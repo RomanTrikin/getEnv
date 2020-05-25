@@ -1,0 +1,17 @@
+{
+    "name": "valean/myenv",
+    "description": "Description of project PhpProject2.",
+    "authors": [
+        {
+            "name": "roman",
+            "email": "rtrikin@mail.ru"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "dev-master"
+    },
+    
+    "autoload": {
+        "classmap": ["src"]
+    }
+}
