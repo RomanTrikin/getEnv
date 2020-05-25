@@ -26,7 +26,6 @@ class myEnv {
         $filelist = glob("{,.}*env", GLOB_BRACE);
         $path = $_SERVER['DOCUMENT_ROOT'];
         foreach ($filelist as $value) {
-            echo $value; echo "\n";
             $dotenv = Dotenv::createImmutable($path, $value);
             $dotenv->load();
         }
